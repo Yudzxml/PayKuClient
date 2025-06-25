@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  const { id } = req.query;
+  const { id } = req.body;
   if (!id) {
     return res.status(400).json({ error: 'Missing transaction id' });
   }
